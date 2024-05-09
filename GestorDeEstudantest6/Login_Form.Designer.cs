@@ -1,6 +1,6 @@
 ﻿namespace GestorDeEstudantest6
 {
-    partial class Form1
+    partial class Login_Form
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("News706 BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 28);
+            this.label1.Location = new System.Drawing.Point(125, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 19);
@@ -55,7 +56,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(102, 266);
+            this.label2.Location = new System.Drawing.Point(66, 254);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
@@ -66,7 +67,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(102, 326);
+            this.label3.Location = new System.Drawing.Point(71, 311);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
@@ -75,7 +76,7 @@
             // 
             // textBoxUsuario
             // 
-            this.textBoxUsuario.Location = new System.Drawing.Point(167, 259);
+            this.textBoxUsuario.Location = new System.Drawing.Point(138, 247);
             this.textBoxUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(145, 20);
@@ -83,7 +84,7 @@
             // 
             // textBoxSenha
             // 
-            this.textBoxSenha.Location = new System.Drawing.Point(167, 319);
+            this.textBoxSenha.Location = new System.Drawing.Point(138, 304);
             this.textBoxSenha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(145, 20);
@@ -91,10 +92,12 @@
             // 
             // pictureBoxUsuario
             // 
-            this.pictureBoxUsuario.Location = new System.Drawing.Point(105, 85);
+            this.pictureBoxUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsuario.Image")));
+            this.pictureBoxUsuario.Location = new System.Drawing.Point(111, 88);
             this.pictureBoxUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBoxUsuario.Name = "pictureBoxUsuario";
-            this.pictureBoxUsuario.Size = new System.Drawing.Size(207, 132);
+            this.pictureBoxUsuario.Size = new System.Drawing.Size(119, 128);
+            this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsuario.TabIndex = 5;
             this.pictureBoxUsuario.TabStop = false;
             this.pictureBoxUsuario.Click += new System.EventHandler(this.pictureBoxUsuario_Click);
@@ -102,7 +105,7 @@
             // buttonLogin
             // 
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(84, 379);
+            this.buttonLogin.Location = new System.Drawing.Point(22, 360);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(100, 23);
@@ -113,7 +116,7 @@
             // buttonCancelar
             // 
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(237, 379);
+            this.buttonCancelar.Location = new System.Drawing.Point(198, 360);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(100, 23);
@@ -121,11 +124,11 @@
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 428);
+            this.ClientSize = new System.Drawing.Size(340, 428);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.pictureBoxUsuario);
@@ -136,8 +139,9 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Imprint MT Shadow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "Form1";
+            this.Name = "Login_Form";
             this.Text = "SGA - acessar";
+            this.Load += new System.EventHandler(this.Login_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

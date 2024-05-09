@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestorDeEstudantest6
 {
-    public partial class Form1 : Form
+    public partial class Login_Form : Form
     {
-        public Form1()
+        public Login_Form()
         {
             InitializeComponent();
         }
@@ -23,6 +23,11 @@ namespace GestorDeEstudantest6
         }
 
         private void pictureBoxUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Form_Load(object sender, EventArgs e)
         {
 
         }
