@@ -1,4 +1,9 @@
-﻿namespace GestorDeEstudantest6
+﻿using Mysqlx.Connection;
+using System;
+using System.Data;
+using MySql.Data.MySqlClient;
+
+namespace GestorDeEstudantest6
 {
     partial class Login_Form
     {
@@ -81,6 +86,7 @@
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(145, 20);
             this.textBoxUsuario.TabIndex = 3;
+            this.textBoxUsuario.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
             // 
             // textBoxSenha
             // 
@@ -89,6 +95,7 @@
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(145, 20);
             this.textBoxSenha.TabIndex = 4;
+            this.textBoxSenha.UseSystemPasswordChar = true;
             // 
             // pictureBoxUsuario
             // 
@@ -112,6 +119,7 @@
             this.buttonLogin.TabIndex = 6;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click_1);
             // 
             // buttonCancelar
             // 
@@ -140,6 +148,7 @@
             this.Font = new System.Drawing.Font("Imprint MT Shadow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Login_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SGA - acessar";
             this.Load += new System.EventHandler(this.Login_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).EndInit();
@@ -159,5 +168,10 @@
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonCancelar;
     }
+
+   
+    
+
+
 }
 
