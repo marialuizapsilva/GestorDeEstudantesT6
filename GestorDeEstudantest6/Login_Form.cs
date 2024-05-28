@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
-namespace GestorDeEstudantest6
+namespace GestorDeEstudantesT6
 {
     public partial class Login_Form : Form
     {
@@ -18,12 +18,7 @@ namespace GestorDeEstudantest6
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBoxUsuario_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
@@ -32,6 +27,7 @@ namespace GestorDeEstudantest6
         {
 
         }
+
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();
@@ -43,10 +39,14 @@ namespace GestorDeEstudantest6
 
             MySqlDataAdapter meuAdaptadorSql = new MySqlDataAdapter();
             DataTable minhaTabela = new DataTable();
-            MySqlCommand meuComandoSql = new MySqlCommand("SELECT * FROM `nome_de_usuarios` WHERE `usuário` = @usuario and `senha` = @senha", meuBancoDeDados.getConexao);
-        
-            meuComandoSql.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = textBoxUsuario.Text;
-            meuComandoSql.Parameters.Add("@senha", MySqlDbType.VarChar).Value = textBoxSenha.Text;
+            MySqlCommand meuComandoSql = 
+                new MySqlCommand("SELECT * FROM `usuarios` WHERE `nome_de_usuario` = @usuario AND `senha` = @senha", 
+                meuBancoDeDados.getConexao);
+
+            meuComandoSql.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = 
+                textBoxUsuario.Text;
+            meuComandoSql.Parameters.Add("@senha", MySqlDbType.VarChar).Value = 
+                textBoxSenha.Text;
 
             meuAdaptadorSql.SelectCommand = meuComandoSql;
 
@@ -54,42 +54,13 @@ namespace GestorDeEstudantest6
 
             if (minhaTabela.Rows.Count > 0)
             {
-                MessageBox.Show("Existem Dados!");
+                //MessageBox.Show("Existem dados!");
+                this.DialogResult = DialogResult.OK;
             }
             else
             {
-                MessageBox.Show("Usuario ou senha invalidos.", "erro de login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        private void textBoxUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonLogin_Click_1(object sender, EventArgs e)
-        {
-            MeuBancoDeDados meuBancoDeDados = new MeuBancoDeDados();
-
-            MySqlDataAdapter meuAdaptadorSql = new MySqlDataAdapter();
-            DataTable minhaTabela = new DataTable();
-            MySqlCommand meuComandoSql = new MySqlCommand("SELECT * FROM `nome_de_usuarios` WHERE `usuário` = @usuario and `senha` = @senha", meuBancoDeDados.getConexao);
-
-            meuComandoSql.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = textBoxUsuario.Text;
-            meuComandoSql.Parameters.Add("@senha", MySqlDbType.VarChar).Value = textBoxSenha.Text;
-
-            meuAdaptadorSql.SelectCommand = meuComandoSql;
-
-            meuAdaptadorSql.Fill(minhaTabela);
-
-            if (minhaTabela.Rows.Count > 0)
-            {
-                MessageBox.Show("Existem Dados!");
-            }
-            else
-            {
-                MessageBox.Show("Usuario ou senha invalidos.", "erro de login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuário ou senha inválidos.", 
+                    "Erro de login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

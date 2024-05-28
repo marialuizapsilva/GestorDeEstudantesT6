@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestorDeEstudantesT6
 {
-    public partial class FormMenuPrincipal : Form
+    public partial class FormInserirEstudante : Form
     {
-        public FormMenuPrincipal()
+        public FormInserirEstudante()
         {
             InitializeComponent();
         }
