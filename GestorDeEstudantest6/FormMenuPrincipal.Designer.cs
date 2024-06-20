@@ -78,6 +78,7 @@
             this.listarAlunosToolStripMenuItem.Name = "listarAlunosToolStripMenuItem";
             this.listarAlunosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.listarAlunosToolStripMenuItem.Text = "Listar Alunos";
+            this.listarAlunosToolStripMenuItem.Click += new System.EventHandler(this.listarAlunosToolStripMenuItem_Click);
             // 
             // estatísticasToolStripMenuItem
             // 
@@ -124,7 +125,8 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenuPrincipal";
-            this.Text = "FormMenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SGA - Menu Principal";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

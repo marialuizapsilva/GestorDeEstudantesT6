@@ -97,9 +97,10 @@
             // 
             // dateTimePickerNascimento
             // 
+            this.dateTimePickerNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerNascimento.Location = new System.Drawing.Point(122, 78);
             this.dateTimePickerNascimento.Name = "dateTimePickerNascimento";
-            this.dateTimePickerNascimento.Size = new System.Drawing.Size(163, 20);
+            this.dateTimePickerNascimento.Size = new System.Drawing.Size(95, 20);
             this.dateTimePickerNascimento.TabIndex = 10;
             // 
             // label4
@@ -129,13 +130,13 @@
             this.radioButtonMasculino.Name = "radioButtonMasculino";
             this.radioButtonMasculino.Size = new System.Drawing.Size(73, 17);
             this.radioButtonMasculino.TabIndex = 1;
-            this.radioButtonMasculino.TabStop = true;
             this.radioButtonMasculino.Text = "Masculino";
             this.radioButtonMasculino.UseVisualStyleBackColor = true;
             // 
             // radioButtonFeminino
             // 
             this.radioButtonFeminino.AutoSize = true;
+            this.radioButtonFeminino.Checked = true;
             this.radioButtonFeminino.Location = new System.Drawing.Point(18, 22);
             this.radioButtonFeminino.Name = "radioButtonFeminino";
             this.radioButtonFeminino.Size = new System.Drawing.Size(67, 17);
@@ -244,7 +245,8 @@
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label2);
             this.Name = "FormInserirEstudante";
-            this.Text = "FormInserirEstudante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SGA - Novo Cadastro";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();

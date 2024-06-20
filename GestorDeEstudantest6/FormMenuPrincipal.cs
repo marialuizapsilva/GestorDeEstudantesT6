@@ -19,8 +19,14 @@ namespace GestorDeEstudantesT6
 
         private void cadastrarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormInserirEstudante formInserirEstudante = new FormInserirEstudante();
-            inserirEstudante
+            FormInserirEstudante inserirEstudante = new FormInserirEstudante();
+            inserirEstudante.Show();
+        }
+
+        private void listarAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListaDeEstudantes listaDeEstudantes = new FormListaDeEstudantes();
+            listaDeEstudantes.Show();
         }
     }
 }
